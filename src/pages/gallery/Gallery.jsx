@@ -1,7 +1,8 @@
 import React from "react";
-import Scroller from "./scroller/Scroller";
-import Category from "./category/Category";
-const polaroidImages = (
+import styles from "./Gallery.module.css";
+import Scroller from "../../helper/scroller/Scroller";
+
+const POLAROID = (
   <>
     <img src="./assests/images/img67.jpg" alt="Gallery 1" />
     <img src="./assests/images/img66.jpg" alt="Gallery 2" />
@@ -29,7 +30,7 @@ const polaroidImages = (
   </>
 );
 
-const headshotImages = (
+const HEADSHOTS = (
   <>
     <img src="./assests/images/img31.jpg" alt="Gallery 6" />
     <img src="./assests/images/img32.jpg" alt="Gallery 6" />
@@ -38,12 +39,48 @@ const headshotImages = (
   </>
 );
 
+const TEST = (
+  <>
+    <img src="./assests/images/img52.jpg" alt="Gallery 6" />
+    <img src="./assests/images/img48.jpg" alt="Gallery 6" />
+    <img src="./assests/images/img47.jpg" alt="Gallery 6" />
+    <img src="./assests/images/img24.jpg" alt="Gallery 6" />
+  </>
+);
+
+const BG_IMAGE = "/assests/images/backgrounds/black2.jpg";
+
+const Album = ({ title, images }) => {
+  return (
+    <div id={title} className={styles["album"]}>
+      {/* Header */}
+      <div className={styles["album-title"]}>
+        <h2 className="section-sub-title">{title}</h2>
+      </div>
+
+      {/* Images */}
+      <Scroller className={styles["images"]}>{images}</Scroller>
+    </div>
+  );
+};
+
 const Gallery = () => {
   return (
-    <section id="gallery" style={{ marginTop: "2rem" }}>
-      <h2>Gallery</h2>
-      <Category title="Images" images={polaroidImages} />
-      <Category title="Polaroids" images={headshotImages} />
+    <section id="gallery" className={styles["container"]}>
+      {/* Title */}
+      <div className={styles["title"]}>
+        <h2 className="section-title">Gallery</h2>
+      </div>
+
+      {/* Contents */}
+      <div className={styles["contents"]}>
+        <Album title="Images" images={POLAROID} />
+        <Album title="Polaroids" images={HEADSHOTS} />
+        <Album title="Test" images={TEST} />
+      </div>
+
+      {/* Background */}
+      <img src={BG_IMAGE} className={styles["background"]} alt="Gallery" />
     </section>
   );
 };
