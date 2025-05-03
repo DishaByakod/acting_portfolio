@@ -1,81 +1,44 @@
-import React from "react";
-import styles from "./Details.module.css";
+import LanguageBar from "./languages";
+import "../../index.css"; // Import the CSS file
 
-const BG_IMAGE = "/assests/images/backgrounds/black2.jpg";
-const PROFILE_IMG = "/assests/images/img68.png";
-
-const Detail = ({ label, value }) => {
+const Info = ({ title, answer }) => {
   return (
-    <li className={styles["detail"]}>
-      <p>{label}: {value}</p>
+    <li>
+      <strong>{title}: </strong> {answer}
     </li>
-  )
+  );
 };
-
-const Language = ({ label, expertise }) => {
-  return (
-    <li className={styles["language"]}>
-      <p className={styles["language-text"]}>{label}:</p>
-      <div className={styles["max"]}>
-        <div className={styles[expertise]}></div>
-      </div>
-    </li>
-  )
-}
 
 const Details = () => {
   return (
-    <section
-      id="details"
-      className={styles["container"]}
-    >
-      {/* Title */}
-      <div className={styles["title"]}>
-        <h2 className="section-title">Details</h2>
+    <section id="details" className="details-section">
+      <h2 className="section-heading">Details</h2>
+      <div className="details-container">
+        <ul className="details-list">
+          <Info title="Age" answer="25" />
+          <Info title="Height" answer="5'8" />
+          <Info title="Weight" answer="70" />
+          <Info title="Shoe Size" answer="8" />
+          <Info title="Bust size" answer="34" />
+          <Info title="Waist Size" answer="32" />
+          <Info title="Hips size" answer="45" />
+          <Info
+            title="Education"
+            answer={
+              <>
+                Innovative Film Academy -{" "}
+                <i>6 months of weekend acting course</i>
+                <br />
+                Saad Khan's acting workshop -{" "}
+                <i>1 day workshop and scene study</i>
+              </>
+            }
+          />
+          <li>
+            <LanguageBar />
+          </li>
+        </ul>
       </div>
-
-      {/* Contents */}
-      <div className={styles["contents"]}>
-
-        {/* Profile */}
-        <div className={styles["profile"]}>
-          <img src={PROFILE_IMG} className={styles["profile"]} alt="Profile" />
-        </div>
-
-        {/* Details & Language */}
-        <div className={styles["details-container"]}>
-
-          {/* Details */}
-          <ul className={styles["details"]}>
-            <Detail label="Height" value="5'8" />
-            <Detail label="Weight" value="70 kg" />
-            <Detail label="Shoe Size" value="8" />
-            <Detail label="Bust Size" value="34cm" />
-            <Detail label="Waist Size" value="32cm" />
-            <Detail label="Hips Size" value="45cm" />
-          </ul>
-
-          {/* Languages */}
-          <div className={styles["languages-container"]}>
-            <p>Languages:</p>
-            <ul className={styles["languages"]}>
-              <Language label="English" expertise="fluent" />
-              <Language label="Hindi" expertise="fluent" />
-              <Language label="Kannada" expertise="fluent" />
-              <Language label="Tamil" expertise="intermediate" />
-              <Language label="Telugu" expertise="beginner" />
-              <Language label="Malayali" expertise="beginner" />
-            </ul>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      {/* Background */}
-      <img className={styles["background"]} src={BG_IMAGE} alt="Gallery" />
-
     </section>
   );
 };
