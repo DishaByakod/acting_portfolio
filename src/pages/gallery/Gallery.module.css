@@ -5,6 +5,7 @@
     /* overflow: hidden; */
     padding: 4rem 0 3rem 0;
     display: flex;
+    user-select: none;
 }
 
 .title {

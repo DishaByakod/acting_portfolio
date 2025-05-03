@@ -1,21 +1,39 @@
 import React from "react";
 import styles from "./Audition.module.css";
 import Scroller from "../../helper/scroller/Scroller";
+import VideoCard from "../../helper/videocard/VideoCard";
 
 const BG_IMAGE = "/assests/images/backgrounds/black2.jpg";
 
 const AUDITION_VIDEOS = (
   <>
-    {["ad audition 2.mp4", "dance video.mp4", "english audition.mp4", "hindi dialog.mp4", "Hindi movie audition.mp4", "kannada audition.mp4", "kannada movie audition 2.mp4", "kannada movie audition.mp4", "movie audition.mp4", "stranger observation.mp4", "tamil movie audition.mp4"].map((video, index) => (
-      <video
-        style={{position: "relative"}}
+    {[
+      {video: "ad audition 2.mp4", poster: undefined, title: "Ad Audition"},
+      {video: "dance video.mp4", poster: undefined, title: "Dance Video"},
+      {video: "english audition.mp4", poster: undefined, title: "English Audition"},
+      {video: "hindi dialog.mp4", poster: undefined, title: "Hindi Dialog"},
+      {video: "Hindi movie audition.mp4", poster: undefined, title: "Hindi Movie Audition"},
+      {video: "kannada audition.mp4", poster: undefined, title: "Kannada Audition"},
+      {video: "kannada movie audition 2.mp4", poster: "kannada movie audition 2.png", title: "Kannada Movie Audition"},
+      {video: "kannada movie audition.mp4", poster: undefined, title: "Kannada Movie Audition"},
+      {video: "movie audition.mp4", poster: undefined, title: "Movie Audition"},
+      {video: "stranger observation.mp4", poster: undefined, title: "Stranger Observation"},
+      {video: "tamil movie audition.mp4", poster: "tamil movie audition.png", title: "Tamil Movie Audition"},
+    ].map((video, index) => (
+      <VideoCard
+        folder={"./assests/audition videos"}
         key={index}
-        src={`./assests/audition videos/${video}`}
-        controls
-      ></video>
+        video={video.video}
+        poster={video.poster}
+        link={video.link}
+        title={video.title}
+        index={index}
+        width="300px"
+        height="200px"
+      />
     ))}
   </>
-)
+);
 
 const Audition = () => {
   const [fullscreenVideo, setFullscreenVideo] = React.useState(null);
@@ -33,7 +51,6 @@ const Audition = () => {
 
       {/* Background */}
       <img className={styles["background"]} src={BG_IMAGE} alt="Gallery" />
-
     </section>
   );
 };

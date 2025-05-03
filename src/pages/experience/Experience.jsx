@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Experience.module.css";
 import Scroller from "../../helper/scroller/Scroller";
+import VideoCard from "../../helper/videocard/VideoCard";
 
 const BG_IMAGE = "/assests/images/backgrounds/black2.jpg";
 
@@ -30,27 +31,29 @@ const AUDITION_VIDEOS = (
   </>
 );
 
+
+
 const AD_SHOOTS = (
   <>
     {[
-      {video: "Dayspring.mp4", poster: "Dayspring.png", link: "https://www.instagram.com/reel/DD3tIkPSj-E/"},
-      {video: "Brigade_1.mp4", poster: undefined, link: "https://www.instagram.com/p/DDgkVwVplgT/"},
-      {video: "Brigade_2.mp4", poster: undefined, link: "https://www.instagram.com/p/DDq0MQvpkr_/"},
-      {video: "Brigade_3.mp4", poster: undefined, link: "https://www.instagram.com/p/DEMMpIrJWw5/"},
-      {video: "Brigade_4.mp4", poster: "Brigade_4.png", link: "https://www.instagram.com/p/DD6TFFqCHSI/"},
-      {video: "Brigade_5.mp4", poster: undefined, link: "https://www.instagram.com/p/DEeRw99pwKY/"},
-      {video: "Saree.mp4", poster: "Saree.png", link: "https://www.instagram.com/reel/DB5KpoMKIcH/"},
+      { video: "Brigade_1.mp4", poster: undefined, link: "https://www.instagram.com/p/DDgkVwVplgT/" },
+      { video: "Brigade_2.mp4", poster: undefined, link: "https://www.instagram.com/p/DDq0MQvpkr_/" },
+      { video: "Brigade_3.mp4", poster: undefined, link: "https://www.instagram.com/p/DEMMpIrJWw5/" },
+      { video: "Brigade_4.mp4", poster: "Brigade_4.png", link: "https://www.instagram.com/p/DD6TFFqCHSI/" },
+      { video: "Brigade_5.mp4", poster: undefined, link: "https://www.instagram.com/p/DEeRw99pwKY/" },
+      { video: "Saree.mp4", poster: "Saree.png", link: "https://www.instagram.com/reel/DB5KpoMKIcH/" },
+      { video: "Dayspring.mp4", poster: "Dayspring.png", link: "https://www.instagram.com/reel/DD3tIkPSj-E/" },
     ].map((video, index) => (
-      <div style={{display: "flex", flexDirection: "column"}}>
-        <video
-          style={{ height: "400px", width: "225px", borderRadius: "16px"}}
-          poster={video.poster ? `./assests/instagram/${video.poster}` : undefined}
-          key={index}
-          src={`./assests/instagram/${video.video}`}
-          controls
-        ></video>
-        <a href={video.link} style={{fontSize: "14px", textAlign: "center", marginTop: "1rem"}} target="_blank">Link</a>
-      </div>
+      <VideoCard
+        key={index}
+        video={video.video}
+        poster={video.poster}
+        link={video.link}
+        index={index}
+        folder={"./assests/instagram"}
+        width="225px"
+        height="400px"
+      />
     ))}
   </>
 );

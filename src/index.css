@@ -161,7 +161,7 @@ a{
   flex: 1;
   font-size: 1.1rem;
   line-height: 2.5rem;
-  padding: 0 2rem 0 1rem;
+  padding: 0 8rem 0 8rem;
   text-align: justify;
   margin-top: 2rem;
 }
@@ -317,7 +317,7 @@ a{
 }
 
 .section-heading {
-  font-size: 24px;
+  font-size: 32px;
   margin-bottom: 20px;
 }
 
@@ -404,6 +404,11 @@ a{
   font-weight: normal;
   color: #B8B8B8;
   
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  color: #B8B8B8;
 }
 
 .section-sub-title {
