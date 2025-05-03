@@ -1,5 +1,4 @@
-// import AboutMePhoto from "../../../public/assests/images/img7.JPG";
-
+import styles from "./About.module.css";
 const AboutMe = () => {
   return (
     <section
@@ -14,11 +13,12 @@ const AboutMe = () => {
       }}
       className="overlay"
     >
-      {/* <div className="about-image"></div> */}
       <div
         style={{ width: "100%", height: "100vh", position: "absolute", top: 0 }}
       >
         <img
+          className={styles["about-image"]}
+          alt="About Me"
           src="/assests/images/img7_1.JPG"
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />

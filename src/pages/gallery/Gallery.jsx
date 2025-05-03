@@ -1,6 +1,6 @@
 import React from "react";
-import Scroller from "./scroller/Scroller";
-import Category from "./category/Category";
+import Scroller from "../../helper/scroller/Scroller";
+import styles from "./Gallery.module.css";
 const normalImages = (
   <>
     <img src="./assests/images/img67.jpg" alt="Gallery 1" />
@@ -38,12 +38,47 @@ const polaroidImages = (
   </>
 );
 
+const TEST = (
+  <>
+    <img src="./assests/images/img52.jpg" alt="Gallery 6" />
+    <img src="./assests/images/img48.jpg" alt="Gallery 6" />
+    <img src="./assests/images/img47.jpg" alt="Gallery 6" />
+    <img src="./assests/images/img24.jpg" alt="Gallery 6" />
+  </>
+);
+
+const BG_IMAGE = "/assests/images/backgrounds/black2.jpg";
+
+const Album = ({ title, images }) => {
+  return (
+    <div id={title} className={styles["album"]}>
+      {/* Header */}
+      <div className={styles["album-title"]}>
+        <h2 className="section-sub-title">{title}</h2>
+      </div>
+
+      {/* Images */}
+      <Scroller className={styles["images"]}>{images}</Scroller>
+    </div>
+  );
+};
+
 const Gallery = () => {
   return (
-    <section id="gallery" style={{ marginTop: "2rem" }}>
-      <h2>Gallery</h2>
-      <Category title="Images" images={normalImages} />
-      <Category title="Polaroids" images={polaroidImages} />
+    <section id="gallery" className={styles["container"]}>
+      {/* Title */}
+      <div className={styles["title"]}>
+        <h2 className="section-title">Gallery</h2>
+      </div>
+
+      {/* Contents */}
+      <div className={styles["contents"]}>
+        <Album title="Images" images={normalImages} />
+        <Album title="Polaroids" images={polaroidImages} />
+      </div>
+
+      {/* Background */}
+      <img src={BG_IMAGE} className={styles["background"]} alt="Gallery" />
     </section>
   );
 };
