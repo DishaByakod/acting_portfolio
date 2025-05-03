@@ -76,7 +76,6 @@ const Gallery = () => {
       <div className={styles["contents"]}>
         <Album title="Images" images={POLAROID} />
         <Album title="Polaroids" images={HEADSHOTS} />
-        <Album title="Test" images={TEST} />
       </div>
 
       {/* Background */}

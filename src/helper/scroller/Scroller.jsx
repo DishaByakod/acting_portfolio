@@ -1,7 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faC,
   faCircleLeft,
   faCircleRight,
 } from "@fortawesome/free-solid-svg-icons";
@@ -12,6 +11,7 @@ const Scroller = ({ children, className }) => {
   const [leftHover, setLeftHover] = React.useState(false);
   const [isAtStart, setIsAtStart] = React.useState(true);
   const [isAtEnd, setIsAtEnd] = React.useState(false);
+  const [isScrollable, setIsScrollable] = React.useState(false);
   const [rightHover, setRightHover] = React.useState(false);
   const scrollRef = React.useRef(null);
 
@@ -26,9 +26,18 @@ const Scroller = ({ children, className }) => {
       }
     };
 
+    const checkScrollable = () => {
+      if (scrollRef.current) {
+        setIsScrollable(
+          scrollRef.current.scrollWidth > scrollRef.current.clientWidth
+        );
+      }
+    };
+
     const scrollContainer = scrollRef.current;
     if (scrollContainer) {
       scrollContainer.addEventListener("scroll", handleScroll);
+      checkScrollable();
     }
 
     // Cleanup when component unmounts
@@ -63,7 +72,7 @@ const Scroller = ({ children, className }) => {
     <div ref={scrollRef} className={className}>
       {children}
       {/* Left Button */}
-      {!isAtStart && (
+      {isScrollable && !isAtStart && (
         <FontAwesomeIcon
           onMouseEnter={() => setLeftHover(true)}
           onMouseLeave={() => setLeftHover(false)}
@@ -82,7 +91,7 @@ const Scroller = ({ children, className }) => {
       )}
 
       {/* Right Button */}
-      {!isAtEnd && (
+      {isScrollable && !isAtEnd && (
         <FontAwesomeIcon
           onMouseEnter={() => setRightHover(true)}
           onMouseLeave={() => setRightHover(false)}

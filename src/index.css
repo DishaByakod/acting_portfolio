@@ -187,23 +187,6 @@ h2 {
   text-align: center;
 }
 
-.details-list {
-  list-style: none;
-  padding: 0;
-  max-width: 600px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-  color: #444;
-}
-
-.details-list li {
-  margin-bottom: 0.6rem;
-  padding: 0.4rem 1rem;
-  background: #fff;
-  border-left: 4px solid #ff7f50;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
 .audition-videos-section {
   padding: 2rem 1rem;
   /* background: #f8f8f8; */
@@ -360,6 +343,19 @@ p {
 li {
   list-style: none;
   list-style-type: none;
+}
+
+.details-list {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.details-list li {
+  margin-bottom: 0.6rem;
+  padding: 0.4rem 1rem;
 }
 
 /* Template */
