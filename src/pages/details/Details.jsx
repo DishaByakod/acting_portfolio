@@ -1,38 +1,44 @@
+import LanguageBar from "./languages";
+import "../../index.css"; // Import the CSS file
+
+const Info = ({ title, answer }) => {
+  return (
+    <li>
+      <strong>{title}: </strong> {answer}
+    </li>
+  );
+};
+
 const Details = () => {
   return (
-    <section
-      id="details"
-      className="details-section"
-      style={{ backgroundColor: "black", color: "white" }}
-    >
+    <section id="details" className="details-section">
       <h2 className="section-heading">Details</h2>
-
-      {/* <ul className="details-list">
-        <li>
-          <strong>Age:</strong> 25
-        </li>
-        <li>
-          <strong>Languages:</strong> Kannada (mother tongue), Hindi and English
-        </li>
-        <li>
-          <strong>Height:</strong> 5'8"
-        </li>
-        <li>
-          <strong>Weight:</strong> 70
-        </li>
-        <li>
-          <strong>Shoe size:</strong> 8
-        </li>
-        <li>
-          <strong>Bust size:</strong> 34
-        </li>
-        <li>
-          <strong>Waist size:</strong> 32
-        </li>
-        <li>
-          <strong>Bottom/hips size:</strong> 45
-        </li>
-      </ul> */}
+      <div className="details-container">
+        <ul className="details-list">
+          <Info title="Age" answer="25" />
+          <Info title="Height" answer="5'8" />
+          <Info title="Weight" answer="70" />
+          <Info title="Shoe Size" answer="8" />
+          <Info title="Bust size" answer="34" />
+          <Info title="Waist Size" answer="32" />
+          <Info title="Hips size" answer="45" />
+          <Info
+            title="Education"
+            answer={
+              <>
+                Innovative Film Academy -{" "}
+                <i>6 months of weekend acting course</i>
+                <br />
+                Saad Khan's acting workshop -{" "}
+                <i>1 day workshop and scene study</i>
+              </>
+            }
+          />
+          <li>
+            <LanguageBar />
+          </li>
+        </ul>
+      </div>
     </section>
   );
 };

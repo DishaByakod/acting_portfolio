@@ -18,8 +18,8 @@ const Scroller = ({ children, className }) => {
       if (scrollRef.current) {
         setIsAtStart(scrollRef.current.scrollLeft === 0);
         setIsAtEnd(
-          scrollRef.current.scrollLeft + scrollRef.current.clientWidth >=
-            scrollRef.current.scrollWidth - 1
+          scrollRef.current.scrollLeft + scrollRef.current.clientWidth >
+            scrollRef.current.scrollWidth
         );
       }
     };

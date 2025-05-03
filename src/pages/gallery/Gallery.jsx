@@ -1,7 +1,7 @@
 import React from "react";
 import Scroller from "./scroller/Scroller";
 import Category from "./category/Category";
-const polaroidImages = (
+const normalImages = (
   <>
     <img src="./assests/images/img67.jpg" alt="Gallery 1" />
     <img src="./assests/images/img66.jpg" alt="Gallery 2" />
@@ -29,7 +29,7 @@ const polaroidImages = (
   </>
 );
 
-const headshotImages = (
+const polaroidImages = (
   <>
     <img src="./assests/images/img31.jpg" alt="Gallery 6" />
     <img src="./assests/images/img32.jpg" alt="Gallery 6" />
@@ -42,8 +42,8 @@ const Gallery = () => {
   return (
     <section id="gallery" style={{ marginTop: "2rem" }}>
       <h2>Gallery</h2>
-      <Category title="Images" images={polaroidImages} />
-      <Category title="Polaroids" images={headshotImages} />
+      <Category title="Images" images={normalImages} />
+      <Category title="Polaroids" images={polaroidImages} />
     </section>
   );
 };

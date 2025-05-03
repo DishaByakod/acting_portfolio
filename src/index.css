@@ -96,7 +96,6 @@ h2 {
 /* Page content */
 .content section {
   padding: 2rem;
-  border-bottom: 1px solid #eee;
 }
 
 /* Collage and hero section */
@@ -220,7 +219,6 @@ h2 {
 
 .details-section {
   padding: 2rem;
-  border-top: 2px solid #ddd;
 }
 
 .details-section .section-heading {
@@ -235,15 +233,11 @@ h2 {
   max-width: 600px;
   margin: 0 auto;
   font-size: 1.1rem;
-  color: #444;
 }
 
 .details-list li {
   margin-bottom: 0.6rem;
   padding: 0.4rem 1rem;
-  background: #fff;
-  border-left: 4px solid #ff7f50;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .audition-videos-section {
@@ -314,6 +308,36 @@ h2 {
 
 .close-btn:hover {
   background: #ff4d4d;
+  color: white;
+}
+
+/*details section*/
+.details-section {
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+.section-heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.details-image-placeholder {
+  width: 300px;
+  height: 70vh;
+  background-color: #333; /* optional: placeholder background */
+  margin-right: 20px;
+}
+
+.details-list {
+  list-style: none;
+  padding: 0;
   color: white;
 }
 
