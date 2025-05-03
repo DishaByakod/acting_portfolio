@@ -5,7 +5,7 @@ import {
   faCircleRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-import styles from "./Scroller.module.css"; 
+// import styles from "./Scroller.module.css"; 
 
 const Scroller = ({ children, className }) => {
   const [leftHover, setLeftHover] = React.useState(false);

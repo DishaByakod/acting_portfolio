@@ -10,6 +10,8 @@ import Experience from "./pages/experience/Experience";
 import Contact from "./pages/contact/Contact";
 import NavBar from "./layout/navbar/NavBar";
 
+const BG_IMAGE = "/assests/images/backgrounds/black2.jpg";
+
 export default function ScrollNavbar() {
   const [showNavbar, setShowNavbar] = useState(false);
 
@@ -22,11 +24,13 @@ export default function ScrollNavbar() {
   }, []);
 
   return (
-    <div>
+    <div >
       {showNavbar && <NavBar />}
       <Landing />
-      <AboutMe />
-      <main className="content">
+      <main className="content" style={{position: "relative"}}>
+        {/* Background */}
+        <img style={{position: "absolute", left: 0, top: 0, height: "100%"}} src={BG_IMAGE} alt="Gallery" />
+        <AboutMe />
         <Gallery />
         <Details />
         <Introduction />

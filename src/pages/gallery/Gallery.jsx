@@ -38,15 +38,6 @@ const polaroidImages = (
   </>
 );
 
-const TEST = (
-  <>
-    <img src="./assests/images/img52.jpg" alt="Gallery 6" />
-    <img src="./assests/images/img48.jpg" alt="Gallery 6" />
-    <img src="./assests/images/img47.jpg" alt="Gallery 6" />
-    <img src="./assests/images/img24.jpg" alt="Gallery 6" />
-  </>
-);
-
 const BG_IMAGE = "/assests/images/backgrounds/black2.jpg";
 
 const Album = ({ title, images }) => {
@@ -78,7 +69,7 @@ const Gallery = () => {
       </div>
 
       {/* Background */}
-      <img src={BG_IMAGE} className={styles["background"]} alt="Gallery" />
+      {/* <img src={BG_IMAGE} className={styles["background"]} alt="Gallery" /> */}
     </section>
   );
 };

@@ -1,6 +1,8 @@
 import LanguageBar from "./languages";
 import "../../index.css"; // Import the CSS file
 
+const BG_IMAGE = "/assests/images/backgrounds/black2.jpg";
+
 const Info = ({ title, answer }) => {
   return (
     <li>
@@ -12,6 +14,10 @@ const Info = ({ title, answer }) => {
 const Details = () => {
   return (
     <section id="details" className="details-section">
+
+      {/* Background */}
+      {/* <img src={BG_IMAGE} style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} alt="Gallery" /> */}
+      {/* Title */}
       <h2 className="section-heading">Details</h2>
       <div className="details-container">
         <ul className="details-list">
@@ -39,6 +45,7 @@ const Details = () => {
           </li>
         </ul>
       </div>
+
     </section>
   );
 };
