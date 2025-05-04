@@ -13,44 +13,45 @@ const Scroller = ({ children, className }) => {
   const [isAtEnd, setIsAtEnd] = React.useState(false);
   const [isScrollable, setIsScrollable] = React.useState(false);
   const [rightHover, setRightHover] = React.useState(false);
-  const scrollRef = React.useRef(null);
+  const scrollContainerRef = React.useRef(null);
+  const imagesContainerRef = React.useRef(null);
 
   React.useEffect(() => {
     const handleScroll = () => {
-      if (scrollRef.current) {
-        setIsAtStart(scrollRef.current.scrollLeft === 0);
+      if (scrollContainerRef.current) {
+        setIsAtStart(imagesContainerRef.current.scrollLeft === 0);
         setIsAtEnd(
-          scrollRef.current.scrollLeft + scrollRef.current.clientWidth >
-            scrollRef.current.scrollWidth
+          imagesContainerRef.current.scrollLeft + imagesContainerRef.current.clientWidth >
+            imagesContainerRef.current.scrollWidth-1
         );
       }
     };
 
     const checkScrollable = () => {
-      if (scrollRef.current) {
+      if (scrollContainerRef.current) {
         setIsScrollable(
-          scrollRef.current.scrollWidth > scrollRef.current.clientWidth
+          imagesContainerRef.current.clientWidth == scrollContainerRef.current.clientWidth
         );
       }
     };
 
-    const scrollContainer = scrollRef.current;
-    if (scrollContainer) {
-      scrollContainer.addEventListener("scroll", handleScroll);
+    const imagesContainer = imagesContainerRef.current;
+    if (imagesContainer) {
+      imagesContainer.addEventListener("scroll", handleScroll);
       checkScrollable();
     }
 
     // Cleanup when component unmounts
     return () => {
-      if (scrollContainer) {
-        scrollContainer.removeEventListener("scroll", handleScroll);
+      if (imagesContainer) {
+        imagesContainer.removeEventListener("scroll", handleScroll);
       }
     };
   }, []);
 
   const scrollLeft = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
+    if (imagesContainerRef.current) {
+      imagesContainerRef.current.scrollBy({
         top: 0,
         left: -300,
         behavior: "smooth",
@@ -59,8 +60,8 @@ const Scroller = ({ children, className }) => {
   };
 
   const scrollRight = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
+    if (imagesContainerRef.current) {
+      imagesContainerRef.current.scrollBy({
         top: 0,
         left: 300,
         behavior: "smooth",
@@ -69,8 +70,8 @@ const Scroller = ({ children, className }) => {
   };
 
   return (
-    <div ref={scrollRef} className={className}>
-      {children}
+    <div ref={scrollContainerRef} className={className} style={{ width: "100%"}}>
+      <div ref={imagesContainerRef} style={{display: "flex", gap: "1rem", overflowX: "hidden"}}>{children}</div>
       {/* Left Button */}
       {isScrollable && !isAtStart && (
         <FontAwesomeIcon
