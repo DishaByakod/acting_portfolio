@@ -19,7 +19,7 @@ const AboutMe = () => {
         <img
           className={styles["about-image"]}
           alt="About Me"
-          src="/assests/images/img7_1.JPG"
+          src="./assests/images/img7_1.JPG"
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
       </div>

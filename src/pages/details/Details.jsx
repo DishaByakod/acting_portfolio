@@ -1,7 +1,6 @@
 import LanguageBar from "./languages";
 import "../../index.css"; // Import the CSS file
 
-const BG_IMAGE = "/assests/images/backgrounds/black2.jpg";
 
 const Info = ({ title, answer }) => {
   return (

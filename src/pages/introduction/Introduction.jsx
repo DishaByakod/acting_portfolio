@@ -3,8 +3,6 @@ import styles from "./Introduction.module.css";
 import Scroller from "../../helper/scroller/Scroller";
 import VideoCard from "../../helper/videocard/VideoCard";
 
-const BG_IMAGE = "/assests/images/backgrounds/black2.jpg";
-
 const introductionVideos = (
   <>
     {[

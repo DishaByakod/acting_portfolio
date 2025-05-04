@@ -14,7 +14,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-const BG_IMAGE = "/assests/images/backgrounds/black2.jpg";
+const BG_IMAGE = "./assests/images/backgrounds/black2.jpg";
 
 export default function ScrollNavbar() {
   const [showNavbar, setShowNavbar] = useState(false);

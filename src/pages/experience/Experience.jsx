@@ -3,7 +3,7 @@ import styles from "./Experience.module.css";
 import Scroller from "../../helper/scroller/Scroller";
 import VideoCard from "../../helper/videocard/VideoCard";
 
-const BG_IMAGE = "/assests/images/backgrounds/black2.jpg";
+const BG_IMAGE = "./assests/images/backgrounds/black2.jpg";
 
 const AUDITION_VIDEOS = (
   <>

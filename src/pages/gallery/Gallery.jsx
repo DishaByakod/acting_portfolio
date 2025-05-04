@@ -38,8 +38,6 @@ const polaroidImages = (
   </>
 );
 
-const BG_IMAGE = "/assests/images/backgrounds/black2.jpg";
-
 const Album = ({ title, images }) => {
   return (
     <div id={title} className={styles["album"]}>
@@ -67,9 +65,6 @@ const Gallery = () => {
         <Album title="Images" images={normalImages} />
         <Album title="Polaroids" images={polaroidImages} />
       </div>
-
-      {/* Background */}
-      {/* <img src={BG_IMAGE} className={styles["background"]} alt="Gallery" /> */}
     </section>
   );
 };
