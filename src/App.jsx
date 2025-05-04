@@ -33,7 +33,7 @@ export default function ScrollNavbar() {
       <main className="content" style={{ position: "relative" }}>
         {/* Background */}
         <img
-          style={{ position: "absolute", left: 0, top: 0, height: "100%" }}
+          style={{ position: "absolute", left: 0, top: 0, height: "100%", width: "100%" }}
           src={BG_IMAGE}
           alt="Gallery"
         />
