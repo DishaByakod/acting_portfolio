@@ -38,7 +38,7 @@ const AboutMe = () => {
         }}
       >
         <h2 className="section-title">About Me</h2>
-        <p className="about-paragraph">
+        <p className={styles["about-paragraph"]}>
           I am Disha Byakod and here is my story of why I want to become an
           actor - I was 8 years old when I watched
           <em> Jab We Met </em> for the first time and fell in love with the
