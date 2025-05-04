@@ -60,13 +60,13 @@ const VideoCard = ({ video, poster, link, index, width, height, folder, title })
       )}
       {link && <a
         href={link}
-        style={{ fontSize: "14px", textAlign: "center", marginTop: "1rem" }}
+        style={{ fontSize: "14px", textAlign: "center", marginTop: "1rem", fontFamily: "fantasy" }}
         target="_blank"
         rel="noopener noreferrer"
       >
         Link
       </a>}
-      {title && <p style={{ fontSize: "16px", textAlign: "center", marginTop: "1rem" }}>{title}</p>}
+      {title && <p style={{ fontSize: "16px", textAlign: "center", marginTop: "1rem", fontFamily: "fantasy" }}>{title}</p>}
     </div>
   );
 };

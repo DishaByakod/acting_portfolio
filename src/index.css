@@ -143,7 +143,8 @@ a{
 
 .hero-title {
   color: white;
-  font-size: 10rem;
+  font-size: 124px;
+  font-family: 'Cinzel', sans-serif;
   font-weight: bold;
   text-align: center;
   opacity: 0.5;
@@ -161,7 +162,7 @@ a{
   flex: 1;
   font-size: 1.1rem;
   line-height: 2.5rem;
-  padding: 0 8rem 0 8rem;
+  padding: 0 4rem 0 4rem;
   text-align: justify;
   margin-top: 2rem;
 }
@@ -215,9 +216,12 @@ a{
 
 .details-section {
   padding: 2rem;
+  font-family: fantasy;
 }
 
 .details-section .section-heading {
+  font-family: 'Cinzel', sans-serif;
+  font-weight: normal;
   position: relative;
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -368,6 +372,10 @@ a{
     display: block;
     cursor: pointer;
   }
+
+  .about-paragraph {
+    padding: 0 2rem;
+  }
 }
 
 @media (min-width: 769px) {
@@ -399,10 +407,11 @@ a{
 
 /* Tanuj CSS */
 .section-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Cinzel', sans-serif;
+  font-weight: bold;
   font-size: 2rem;
-  font-weight: normal;
   color: #B8B8B8;
+  font-weight: normal;
   
 }
 
@@ -412,7 +421,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-sub-title {
-  font-family: 'Lato', sans-serif;
+  font-family: fantasy, sans-serif;
   font-size: 1.25rem;
   letter-spacing: 0.08rem;
   font-weight: normal;
@@ -420,7 +429,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  font-family: 'Lato', sans-serif;
+  font-family: fantasy, sans-serif;
   font-size: 1.25rem;
   font-weight: normal;
   color: #B8B8B8;

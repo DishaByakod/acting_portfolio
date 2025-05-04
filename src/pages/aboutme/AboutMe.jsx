@@ -37,7 +37,7 @@ const AboutMe = () => {
           opacity: "0.8",
         }}
       >
-        <h2 className="section-heading">About Me</h2>
+        <h2 className="section-title">About Me</h2>
         <p className="about-paragraph">
           I am Disha Byakod and here is my story of why I want to become an
           actor - I was 8 years old when I watched
