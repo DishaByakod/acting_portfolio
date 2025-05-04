@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./NavBar.module.css";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
@@ -6,12 +7,12 @@ const NavBar = () => {
     setMenuOpen(!menuOpen);
   };
   return (
-    <nav className="navbar">
-      <div className="brand">Disha Byakod</div>
-      <div className="menu-toggle" onClick={toggleMenu}>
+    <nav className={styles["navbar"]}>
+      <div className={styles["brand"]}>Disha Byakod</div>
+      <div className={styles["menu-toggle"]} onClick={toggleMenu}>
         ☰
       </div>
-      <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
+      <ul className={`${styles["nav-links"]} ${menuOpen ? "active" : ""}`}>
         <li>
           <a href="#about" onClick={() => setMenuOpen(false)}>
             About Me
