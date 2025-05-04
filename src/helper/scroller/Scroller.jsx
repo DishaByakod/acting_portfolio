@@ -5,7 +5,7 @@ import {
   faCircleRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-// import styles from "./Scroller.module.css"; 
+import styles from "./Scroller.module.css"; 
 
 const Scroller = ({ children, className }) => {
   const [leftHover, setLeftHover] = React.useState(false);
@@ -28,7 +28,7 @@ const Scroller = ({ children, className }) => {
     };
 
     const checkScrollable = () => {
-      if (scrollContainerRef.current) {
+      if (scrollContainerRef.current && imagesContainerRef.current) {
         setIsScrollable(
           imagesContainerRef.current.clientWidth == scrollContainerRef.current.clientWidth
         );
@@ -71,7 +71,7 @@ const Scroller = ({ children, className }) => {
 
   return (
     <div ref={scrollContainerRef} className={className} style={{ width: "100%"}}>
-      <div ref={imagesContainerRef} style={{display: "flex", gap: "1rem", overflowX: "hidden"}}>{children}</div>
+      <div ref={imagesContainerRef} className={styles["imgsContainer"]}>{children}</div>
       {/* Left Button */}
       {isScrollable && !isAtStart && (
         <FontAwesomeIcon
