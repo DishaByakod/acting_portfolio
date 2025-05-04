@@ -6,7 +6,7 @@ const normalImages = (
     <img src="./assests/images/img67.jpg" alt="Gallery 1" />
     <img src="./assests/images/img66.jpg" alt="Gallery 2" />
     <img src="./assests/images/img65.jpg" alt="Gallery 3" />
-    <img src="./assests/images/img64.jpg" alt="Gallery 4" />
+    <img src="./assests/images/img64.JPG" alt="Gallery 4" />
     <img src="./assests/images/img63.jpeg" alt="Gallery 5" />
     <img src="./assests/images/img62.jpg" alt="Gallery 6" />
     <img src="./assests/images/img61.jpg" alt="Gallery 6" />
@@ -19,7 +19,7 @@ const normalImages = (
     <img src="./assests/images/img52.jpg" alt="Gallery 6" />
     <img src="./assests/images/img48.jpg" alt="Gallery 6" />
     <img src="./assests/images/img47.jpg" alt="Gallery 6" />
-    <img src="./assests/images/img24.jpg" alt="Gallery 6" />
+    <img src="./assests/images/img24.JPG" alt="Gallery 6" />
     <img src="./assests/images/img25.jpg" alt="Gallery 6" />
     <img src="./assests/images/img26.jpg" alt="Gallery 6" />
     <img src="./assests/images/img27.jpg" alt="Gallery 6" />
@@ -31,10 +31,10 @@ const normalImages = (
 
 const polaroidImages = (
   <>
-    <img src="./assests/images/img31.jpg" alt="Gallery 6" />
-    <img src="./assests/images/img32.jpg" alt="Gallery 6" />
-    <img src="./assests/images/img33.jpg" alt="Gallery 6" />
-    <img src="./assests/images/img34.jpg" alt="Gallery 6" />
+    <img src="./assests/images/img31.JPG" alt="Gallery 6" />
+    <img src="./assests/images/img32.JPG" alt="Gallery 6" />
+    <img src="./assests/images/img33.JPG" alt="Gallery 6" />
+    <img src="./assests/images/img34.JPG" alt="Gallery 6" />
   </>
 );
 

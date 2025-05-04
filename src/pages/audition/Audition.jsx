@@ -18,7 +18,7 @@ const AUDITION_VIDEOS = (
       {video: "kannada movie audition.mp4", poster: undefined, title: "Kannada Movie Audition"},
       {video: "movie audition.mp4", poster: undefined, title: "Movie Audition"},
       {video: "stranger observation.mp4", poster: undefined, title: "Stranger Observation"},
-      {video: "tamil movie audition.mp4", poster: "tamil movie audition.png", title: "Tamil Movie Audition"},
+      {video: "tamil movie audition.mp4", poster: "tamil movie audition.png",},
     ].map((video, index) => (
       <VideoCard
         folder={"./assests/audition videos"}

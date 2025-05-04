@@ -3,26 +3,26 @@ const Landing = () => {
     <div className="hero-section">
       <div className="collage">
         <div
-          style={{ backgroundImage: "url('./assests/images/img1.jpg')" }}
+          style={{ backgroundImage: "url('./assests/images/img1.JPG')" }}
         ></div>
         <div
-          style={{ backgroundImage: "url('./assests/images/img2.jpg')" }}
-        ></div>
-        <div
-          style={{
-            backgroundImage: "url('./assests/images/img3.jpg')",
-          }}
-        ></div>
-        <div
-          style={{ backgroundImage: "url('./assests/images/img4.jpg')" }}
+          style={{ backgroundImage: "url('./assests/images/img2.JPG')" }}
         ></div>
         <div
           style={{
-            backgroundImage: "url('./assests/images/img5.jpg')",
+            backgroundImage: "url('./assests/images/img3.JPG')",
           }}
         ></div>
         <div
-          style={{ backgroundImage: "url('./assests/images/img6.jpg')" }}
+          style={{ backgroundImage: "url('./assests/images/img4.JPG')" }}
+        ></div>
+        <div
+          style={{
+            backgroundImage: "url('./assests/images/img5.JPG')",
+          }}
+        ></div>
+        <div
+          style={{ backgroundImage: "url('./assests/images/img6.JPG')" }}
         ></div>
       </div>
       <div className="overlay">
