@@ -80,7 +80,7 @@ const Audition = () => {
   };
 
   return (
-    <section id="audition-videos" className={styles["container"]}>
+    <section id="experience" className={styles["container"]}>
       <h2 className="section-title">Experience</h2>
       <div className={`${styles["videos-scroll"]} videos-scroll`}>
         <Album title="Short Films" videos={AUDITION_VIDEOS} />

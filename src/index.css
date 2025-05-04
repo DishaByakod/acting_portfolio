@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: sans-serif;
   overflow-x: hidden;
@@ -19,13 +23,13 @@ h2 {
 a{
   text-decoration: none;
   color: inherit;
-  text-decoration: underline;
 }
 
 
 /* Page content */
 .content section {
   padding: 2rem;
+  scroll-behavior: smooth;
 }
 
 /* Collage and hero section */
@@ -261,7 +265,7 @@ a{
 /* Responsive text */
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 6rem;
+    font-size: 4rem;
   }
   .collage {
     display: grid;
@@ -269,23 +273,6 @@ a{
     grid-template-rows: repeat(3, 1fr); /* 3 rows */
     gap: 4px;
     height: 100%;
-  }
-  .nav-links {
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.4); /* dark overlay for text readability */
-    position: absolute;
-    top: 60px;
-    justify-content: space-between;
-    display: none;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-    cursor: pointer;
   }
 }
 

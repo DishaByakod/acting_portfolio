@@ -29,7 +29,7 @@ const Audition = () => {
   const [fullscreenVideo, setFullscreenVideo] = React.useState(null);
 
   return (
-    <section id="audition-videos" className={styles["container"]}>
+    <section id="intro-videos" className={styles["container"]}>
       <h2 className="section-title">Introduction Videos</h2>
       <div className="video-scroll">
         <Scroller className={styles["videos"]}>{introductionVideos}</Scroller>
