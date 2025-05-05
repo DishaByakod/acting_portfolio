@@ -11,6 +11,7 @@ const AUDITION_VIDEOS = (
       "https://www.youtube.com/watch?v=1EEPg-_612Q",
       "https://youtu.be/m3n1hQtFF00?si=lw6Ipc1KgGgR28OU",
       "https://youtu.be/0sZA9YR3e7Q?si=gwDbeCBmsfWldFKY",
+      "https://youtu.be/GgJ_kM8Y-yQ?si=huEsEB9VvtMdDd9z"
     ].map((video, index) => {
       const embedUrl = video
         .replace("youtu.be/", "www.youtube.com/embed/")
