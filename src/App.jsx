@@ -18,6 +18,7 @@ const BG_IMAGE = `${process.env.PUBLIC_URL}/assets/images/backgrounds/black2.jpg
 
 export default function ScrollNavbar() {
   const [showNavbar, setShowNavbar] = useState(false);
+  
 
   useEffect(() => {
     const handleScroll = () => {
