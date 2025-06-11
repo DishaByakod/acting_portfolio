@@ -3,7 +3,7 @@ import styles from "./Audition.module.css";
 import Scroller from "../../helper/scroller/Scroller";
 import VideoCard from "../../helper/videocard/VideoCard";
 
-const BG_IMAGE = "./assests/images/backgrounds/black2.jpg";
+const BG_IMAGE = `${process.env.PUBLIC_URL}/assets/images/backgrounds/black2.jpg`;
 
 const AUDITION_VIDEOS = (
   <>
@@ -21,7 +21,7 @@ const AUDITION_VIDEOS = (
       {video: "tamil movie audition.mp4", poster: "tamil movie audition.png",},
     ].map((video, index) => (
       <VideoCard
-        folder={"./assests/audition videos"}
+        folder={`${process.env.PUBLIC_URL}/assets/audition videos`}
         key={index}
         video={video.video}
         poster={video.poster}

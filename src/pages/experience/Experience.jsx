@@ -3,7 +3,7 @@ import styles from "./Experience.module.css";
 import Scroller from "../../helper/scroller/Scroller";
 import VideoCard from "../../helper/videocard/VideoCard";
 
-const BG_IMAGE = "./assests/images/backgrounds/black2.jpg";
+const BG_IMAGE = `${process.env.PUBLIC_URL}/assets/images/backgrounds/black2.jpg`;
 
 const AUDITION_VIDEOS = (
   <>
@@ -51,7 +51,7 @@ const AD_SHOOTS = (
         poster={video.poster}
         link={video.link}
         index={index}
-        folder={"./assests/instagram"}
+        folder={`${process.env.PUBLIC_URL}/assets/instagram`}
         width="225px"
         height="400px"
       />

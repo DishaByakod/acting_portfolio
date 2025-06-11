@@ -17,7 +17,7 @@ const introductionVideos = (
         link={undefined}
         index={index}
         title={video.title}
-        folder={"./assests/introduction_videos"}
+        folder={`${process.env.PUBLIC_URL}/assets/introduction_videos`}
         width="300px"
         height="200px"
       />
