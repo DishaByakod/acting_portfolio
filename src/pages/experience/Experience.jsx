@@ -5,13 +5,12 @@ import VideoCard from "../../helper/videocard/VideoCard";
 
 const BG_IMAGE = `${process.env.PUBLIC_URL}/assets/images/backgrounds/black2.jpg`;
 
-const AUDITION_VIDEOS = (
+const Short_films = (
   <>
     {[
       "https://www.youtube.com/watch?v=1EEPg-_612Q",
       "https://youtu.be/m3n1hQtFF00?si=lw6Ipc1KgGgR28OU",
       "https://youtu.be/0sZA9YR3e7Q?si=gwDbeCBmsfWldFKY",
-      "https://youtu.be/GgJ_kM8Y-yQ?si=huEsEB9VvtMdDd9z"
     ].map((video, index) => {
       const embedUrl = video
         .replace("youtu.be/", "www.youtube.com/embed/")
@@ -32,18 +31,90 @@ const AUDITION_VIDEOS = (
   </>
 );
 
-
-
+const Podcast = (
+  <>
+    {["https://youtu.be/GgJ_kM8Y-yQ?si=qmSWvsXxiHidI2S_"].map(
+      (video, index) => {
+        const embedUrl = video
+          .replace("youtu.be/", "www.youtube.com/embed/")
+          .replace("watch?v=", "embed/");
+        return (
+          <iframe
+            key={index}
+            width="420"
+            height="315"
+            src={embedUrl}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            title={`Audition Video ${index + 1}`}
+          ></iframe>
+        );
+      }
+    )}
+  </>
+);
+const Album_song = (
+  <>
+    {["https://youtu.be/jMXWKOta9j0?si=xPOGRYEMECjXGWAG"].map(
+      (video, index) => {
+        const embedUrl = video
+          .replace("youtu.be/", "www.youtube.com/embed/")
+          .replace("watch?v=", "embed/");
+        return (
+          <iframe
+            key={index}
+            width="420"
+            height="315"
+            src={embedUrl}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            title={`Audition Video ${index + 1}`}
+          ></iframe>
+        );
+      }
+    )}
+  </>
+);
 const AD_SHOOTS = (
   <>
     {[
-      { video: "Brigade_1.mp4", poster: undefined, link: "https://www.instagram.com/p/DDgkVwVplgT/" },
-      { video: "Brigade_2.mp4", poster: undefined, link: "https://www.instagram.com/p/DDq0MQvpkr_/" },
-      { video: "Brigade_3.mp4", poster: undefined, link: "https://www.instagram.com/p/DEMMpIrJWw5/" },
-      { video: "Brigade_4.mp4", poster: "Brigade_4.png", link: "https://www.instagram.com/p/DD6TFFqCHSI/" },
-      { video: "Brigade_5.mp4", poster: undefined, link: "https://www.instagram.com/p/DEeRw99pwKY/" },
-      { video: "Saree.mp4", poster: "Saree.png", link: "https://www.instagram.com/reel/DB5KpoMKIcH/" },
-      { video: "Dayspring.mp4", poster: "Dayspring.png", link: "https://www.instagram.com/reel/DD3tIkPSj-E/" },
+      {
+        video: "Brigade_1.mp4",
+        poster: undefined,
+        link: "https://www.instagram.com/p/DDgkVwVplgT/",
+      },
+      {
+        video: "Brigade_2.mp4",
+        poster: undefined,
+        link: "https://www.instagram.com/p/DDq0MQvpkr_/",
+      },
+      {
+        video: "Brigade_3.mp4",
+        poster: undefined,
+        link: "https://www.instagram.com/p/DEMMpIrJWw5/",
+      },
+      {
+        video: "Brigade_4.mp4",
+        poster: "Brigade_4.png",
+        link: "https://www.instagram.com/p/DD6TFFqCHSI/",
+      },
+      {
+        video: "Brigade_5.mp4",
+        poster: undefined,
+        link: "https://www.instagram.com/p/DEeRw99pwKY/",
+      },
+      {
+        video: "Saree.mp4",
+        poster: "Saree.png",
+        link: "https://www.instagram.com/reel/DB5KpoMKIcH/",
+      },
+      {
+        video: "Dayspring.mp4",
+        poster: "Dayspring.png",
+        link: "https://www.instagram.com/reel/DD3tIkPSj-E/",
+      },
     ].map((video, index) => (
       <VideoCard
         key={index}
@@ -84,7 +155,9 @@ const Audition = () => {
     <section id="experience" className={styles["container"]}>
       <h2 className="section-title">Experience</h2>
       <div className={`${styles["videos-scroll"]} videos-scroll`}>
-        <Album title="Short Films" videos={AUDITION_VIDEOS} />
+        <Album title="Short Films" videos={Short_films} />
+        <Album title="Podcast" videos={Podcast} />
+        <Album title="Album Songs" videos={Album_song} />
         <Album title="Ad Shoots" videos={AD_SHOOTS} />
       </div>
 
