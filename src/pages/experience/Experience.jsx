@@ -5,7 +5,7 @@ import VideoCard from "../../helper/videocard/VideoCard";
 
 const BG_IMAGE = "./assests/images/backgrounds/black2.jpg";
 
-const AUDITION_VIDEOS = (
+const Short_films = (
   <>
     {[
       "https://www.youtube.com/watch?v=1EEPg-_612Q",
@@ -33,7 +33,52 @@ const AUDITION_VIDEOS = (
 );
 
 
-
+const Podcast = (
+  <>
+    {["https://youtu.be/GgJ_kM8Y-yQ?si=qmSWvsXxiHidI2S_"].map(
+      (video, index) => {
+        const embedUrl = video
+          .replace("youtu.be/", "www.youtube.com/embed/")
+          .replace("watch?v=", "embed/");
+        return (
+          <iframe
+            key={index}
+            width="420"
+            height="315"
+            src={embedUrl}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            title={`Audition Video ${index + 1}`}
+          ></iframe>
+        );
+      }
+    )}
+  </>
+);
+const Album_song = (
+  <>
+    {["https://youtu.be/jMXWKOta9j0?si=xPOGRYEMECjXGWAG"].map(
+      (video, index) => {
+        const embedUrl = video
+          .replace("youtu.be/", "www.youtube.com/embed/")
+          .replace("watch?v=", "embed/");
+        return (
+          <iframe
+            key={index}
+            width="420"
+            height="315"
+            src={embedUrl}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            title={`Audition Video ${index + 1}`}
+          ></iframe>
+        );
+      }
+    )}
+  </>
+);
 const AD_SHOOTS = (
   <>
     {[
@@ -84,8 +129,11 @@ const Audition = () => {
     <section id="experience" className={styles["container"]}>
       <h2 className="section-title">Experience</h2>
       <div className={`${styles["videos-scroll"]} videos-scroll`}>
-        <Album title="Short Films" videos={AUDITION_VIDEOS} />
+        <Album title="Short Films" videos={Short_films} />
+        <Album title="Podcast" videos={Podcast} />
+        <Album title="Album Songs" videos={Album_song} />
         <Album title="Ad Shoots" videos={AD_SHOOTS} />
+        
       </div>
 
       {/* Background */}
