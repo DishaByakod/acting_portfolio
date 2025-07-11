@@ -20,6 +20,7 @@ const Short_films = (
           key={index}
           width="420"
           height="315"
+          git
           src={embedUrl}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
