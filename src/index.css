@@ -2,7 +2,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
@@ -20,11 +19,10 @@ h2 {
   text-align: center;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
-
 
 /* Page content */
 .content section {
@@ -72,17 +70,24 @@ a{
 .hero-title {
   color: white;
   font-size: 124px;
-  font-family: 'Cinzel', sans-serif;
+  font-family: "Cinzel", sans-serif;
   font-weight: bold;
   text-align: center;
   opacity: 0.5;
+}
+#about {
+  position: relative;
+  height: 130vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .about-section {
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: center;
-  padding: 4rem 2rem;
+  padding: 4rem;
   gap: 2rem;
 }
 
@@ -138,7 +143,7 @@ a{
 }
 
 .details-section .section-heading {
-  font-family: 'Cinzel', sans-serif;
+  font-family: "Cinzel", sans-serif;
   font-weight: normal;
   position: relative;
   font-size: 2rem;
@@ -300,21 +305,23 @@ a{
   }
 }
 
-
-
 /* Tanuj CSS */
 .section-title {
-  font-family: 'Cinzel', sans-serif;
+  font-family: "Cinzel", sans-serif;
   font-weight: bold;
   font-size: 2rem;
-  color: #B8B8B8;
+  color: #b8b8b8;
   font-weight: normal;
-  
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
-  color: #B8B8B8;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  color: #b8b8b8;
 }
 
 .section-sub-title {
@@ -322,14 +329,20 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.25rem;
   letter-spacing: 0.08rem;
   font-weight: normal;
-  color: #B8B8B8;
+  color: #b8b8b8;
 }
 
 p {
-  font-family: fantasy, sans-serif;
+  font-family: sans-serif;
   font-size: 1.25rem;
   font-weight: normal;
-  color: #B8B8B8;
+  color: #b8b8b8;
+}
+.float-image {
+  float: left; /* or right */
+  margin-right: 20px; /* space between image and text */
+  width: 200px;
+  height: auto;
 }
 
 li {
@@ -353,19 +366,49 @@ li {
 /* Template */
 /* Breakpoints */
 /* smartphones, iPhone, portrait 480x320 phones */
-@media (min-width:320px)  {}
+@media (min-width: 320px) {
+}
 
 /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-@media (min-width:481px)  {}
+@media (min-width: 481px) {
+}
 
 /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-@media (min-width:641px)  {}
+@media (min-width: 641px) {
+}
 
 /* tablet, landscape iPad, lo-res laptops ands desktops */
-@media (min-width:961px)  {  }
+@media (min-width: 961px) {
+}
 
 /* big landscape tablets, laptops, and desktops */
-@media (min-width:1025px) {  }
+@media (min-width: 1025px) {
+}
 
 /* hi-res laptops and desktops */
-@media (min-width:1281px) {  }
+@media (min-width: 1281px) {
+}
+@media (max-width: 768px) {
+  .responsive-container {
+    flex-direction: column;
+  }
+
+  .image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0.6; /* Optional: dim image for text readability */
+  }
+
+  .text-overlay {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin: auto;
+  }
+}

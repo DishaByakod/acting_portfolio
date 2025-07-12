@@ -3,11 +3,10 @@ import styles from "./Experience.module.css";
 import Scroller from "../../helper/scroller/Scroller";
 import VideoCard from "../../helper/videocard/VideoCard";
 
-const BG_IMAGE = `${process.env.PUBLIC_URL}/assets/images/backgrounds/black2.jpg`;
-
 const Short_films = (
   <>
     {[
+      "https://youtu.be/3Psqi4AJQGo?si=wV8ZY8pQib8I5eou",
       "https://www.youtube.com/watch?v=1EEPg-_612Q",
       "https://youtu.be/m3n1hQtFF00?si=lw6Ipc1KgGgR28OU",
       "https://youtu.be/0sZA9YR3e7Q?si=gwDbeCBmsfWldFKY",
@@ -161,9 +160,6 @@ const Audition = () => {
         <Album title="Album Songs" videos={Album_song} />
         <Album title="Ad Shoots" videos={AD_SHOOTS} />
       </div>
-
-      {/* Background */}
-      <img className={styles["background"]} src={BG_IMAGE} alt="Gallery" />
     </section>
   );
 };

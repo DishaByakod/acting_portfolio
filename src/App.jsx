@@ -18,7 +18,6 @@ const BG_IMAGE = `${process.env.PUBLIC_URL}/assets/images/backgrounds/black2.jpg
 
 export default function ScrollNavbar() {
   const [showNavbar, setShowNavbar] = useState(false);
-  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,12 +31,6 @@ export default function ScrollNavbar() {
     <div position="relative">
       {showNavbar && <NavBar />}
       <main className="content" style={{ position: "relative" }}>
-        {/* Background */}
-        <img
-          style={{ position: "absolute", left: 0, top: 0, height: "100%", width: "100%" }}
-          src={BG_IMAGE}
-          alt="Gallery"
-        />
         <Landing />
         <AboutMe />
         <Gallery />
@@ -59,14 +52,35 @@ export default function ScrollNavbar() {
           fontSize: "2rem",
         }}
       >
-        <div style={{ padding: "1rem", backgroundColor: "black", borderRadius: "50%", opacity: 0.6, }}>
-          <a href="https://www.instagram.com/direction_grl/" target="_blank" style={{width: "100%", height: "100%", display: "flex"}}>
-            <FontAwesomeIcon icon={faInstagram} width="2rem" height="2rem"/>
+        <div
+          style={{
+            padding: "1rem",
+            backgroundColor: "black",
+            borderRadius: "50%",
+            opacity: 0.6,
+          }}
+        >
+          <a
+            href="https://www.instagram.com/direction_grl/"
+            target="_blank"
+            style={{ width: "100%", height: "100%", display: "flex" }}
+          >
+            <FontAwesomeIcon icon={faInstagram} width="2rem" height="2rem" />
           </a>
         </div>
-        <div  style={{ padding: "1rem", backgroundColor: "black", borderRadius: "50%", opacity: 0.6, }}>
-          <a href="mailto:dishabyakod1999@gmail.com" style={{width: "100%", height: "100%", display: "flex"}}>
-            <FontAwesomeIcon icon={faEnvelope} width="2rem" height="2rem"/>
+        <div
+          style={{
+            padding: "1rem",
+            backgroundColor: "black",
+            borderRadius: "50%",
+            opacity: 0.6,
+          }}
+        >
+          <a
+            href="mailto:dishabyakod1999@gmail.com"
+            style={{ width: "100%", height: "100%", display: "flex" }}
+          >
+            <FontAwesomeIcon icon={faEnvelope} width="2rem" height="2rem" />
           </a>
         </div>
       </div>

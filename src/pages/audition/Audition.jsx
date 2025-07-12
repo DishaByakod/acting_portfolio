@@ -3,22 +3,48 @@ import styles from "./Audition.module.css";
 import Scroller from "../../helper/scroller/Scroller";
 import VideoCard from "../../helper/videocard/VideoCard";
 
-const BG_IMAGE = `${process.env.PUBLIC_URL}/assets/images/backgrounds/black2.jpg`;
-
 const AUDITION_VIDEOS = (
   <>
     {[
-      {video: "ad audition 2.mp4", poster: undefined, title: "Ad Audition"},
-      {video: "dance video.mp4", poster: undefined, title: "Dance Video"},
-      {video: "english audition.mp4", poster: undefined, title: "English Audition"},
-      {video: "hindi dialog.mp4", poster: undefined, title: "Hindi Dialog"},
-      {video: "Hindi movie audition.mp4", poster: undefined, title: "Hindi Movie Audition"},
-      {video: "kannada audition.mp4", poster: undefined, title: "Kannada Audition"},
-      {video: "kannada movie audition 2.mp4", poster: "kannada movie audition 2.png", title: "Kannada Movie Audition"},
-      {video: "kannada movie audition.mp4", poster: undefined, title: "Kannada Movie Audition"},
-      {video: "movie audition.mp4", poster: undefined, title: "Movie Audition"},
-      {video: "stranger observation.mp4", poster: undefined, title: "Stranger Observation"},
-      {video: "tamil movie audition.mp4", poster: "tamil movie audition.png",},
+      { video: "ad audition 2.mp4", poster: undefined, title: "Ad Audition" },
+      { video: "dance video.mp4", poster: undefined, title: "Dance Video" },
+      {
+        video: "english audition.mp4",
+        poster: undefined,
+        title: "English Audition",
+      },
+      { video: "hindi dialog.mp4", poster: undefined, title: "Hindi Dialog" },
+      {
+        video: "Hindi movie audition.mp4",
+        poster: undefined,
+        title: "Hindi Movie Audition",
+      },
+      {
+        video: "kannada audition.mp4",
+        poster: undefined,
+        title: "Kannada Audition",
+      },
+      {
+        video: "kannada movie audition 2.mp4",
+        poster: "kannada movie audition 2.png",
+        title: "Kannada Movie Audition",
+      },
+      {
+        video: "kannada movie audition.mp4",
+        poster: undefined,
+        title: "Kannada Movie Audition",
+      },
+      {
+        video: "movie audition.mp4",
+        poster: undefined,
+        title: "Movie Audition",
+      },
+      {
+        video: "stranger observation.mp4",
+        poster: undefined,
+        title: "Stranger Observation",
+      },
+      { video: "tamil movie audition.mp4", poster: "tamil movie audition.png" },
     ].map((video, index) => (
       <VideoCard
         folder={`${process.env.PUBLIC_URL}/assets/audition videos`}
@@ -48,9 +74,6 @@ const Audition = () => {
       <div className="video-scroll">
         <Scroller className={styles["videos"]}>{AUDITION_VIDEOS}</Scroller>
       </div>
-
-      {/* Background */}
-      <img className={styles["background"]} src={BG_IMAGE} alt="Gallery" />
     </section>
   );
 };
