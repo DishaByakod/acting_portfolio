@@ -81,6 +81,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 .about-section {
   display: flex;
@@ -388,7 +390,7 @@ li {
 /* hi-res laptops and desktops */
 @media (min-width: 1281px) {
 }
-@media (max-width: 768px) {
+@media (max-width: 1248px) {
   .responsive-container {
     flex-direction: column;
   }
@@ -410,5 +412,21 @@ li {
     padding: 2rem;
     text-align: center;
     margin: auto;
+  }
+
+  .content section {
+    padding: 0rem;
+    scroll-behavior: smooth;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-overlay {
+    padding: 0;
+  }
+
+  #about {
+    height: 100%;
+    padding: 4rem 0;
   }
 }

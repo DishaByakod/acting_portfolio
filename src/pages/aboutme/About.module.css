@@ -5,6 +5,7 @@
   background-size: cover;
   background-position: center;
   border-radius: 10px;
+  width: 100%;
 }
 
 .about-paragraph {
@@ -27,7 +28,10 @@
 }
 
 /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-@media (min-width: 641px) {
+@media (max-width: 661px) {
+  .about-paragraph {
+    padding: 0 1rem;
+  }
 }
 
 /* tablet, landscape iPad, lo-res laptops ands desktops */
@@ -42,10 +46,10 @@
 @media (min-width: 1281px) {
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .about-paragraph {
     font-size: 14px;
     line-height: 1.8rem;
-    padding: 0 1rem;
+    padding: 0 2rem;
   }
 }
